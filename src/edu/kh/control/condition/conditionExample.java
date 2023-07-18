@@ -172,9 +172,13 @@ public class conditionExample {
 		
 		if(age <= 13) {
 			System.out.println("어린이 입니다.");
+		
 		} else if(13 < age && age <= 19) {
 			System.out.println("청소년 입니다.");
-		} else if()
+		
+		} else if(age > 19) {
+			System.out.println("성인 입니다.");
+		}
 		
 	
 		
@@ -191,6 +195,34 @@ public class conditionExample {
 		// 60점 미만 : F
 		// 0점 미만, 100 초과 : "잘못 입력하셨습니다"
 		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("점수(100점 만점) : ");
+		int sco = sc.nextInt();
+		
+	    if(sco >= 90 && sco <= 100) {
+			System.out.println("A");
+		
+	    } else if(sco >= 80 && sco < 90) {
+			System.out.println("B");
+		
+	    } else if(sco >= 70 && sco < 80) {
+			System.out.println("C");
+		
+	    } else if(sco >= 60 && sco < 70) {
+			System.out.println("D");
+		
+	    } else if(sco >= 0 && sco < 60) {
+			System.out.println("F");
+		
+	    } else {
+			System.out.println("잘못 입력하셨습니다.");
+		
+	    }
+		
+			
+		
+		
 	}
 	
 	public void ex7() {
@@ -200,6 +232,34 @@ public class conditionExample {
 		// 나이가 12미만인 경우 : "적정 연령이 아닙니다."
 		// 키가 140.0cm 미만 : "적정 키가 아닙니다."
 		// 나이를 0세 미만, 100세 초과 시 : "잘못 입력 하셨습니다."
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("나이 : ");
+		int age = sc.nextInt();
+		
+		System.out.print("키 : ");
+		double hei = sc.nextDouble();
+		
+		
+		if(age >= 12 && hei >= 140.0) {
+			System.out.println("탑승 가능");
+			
+		} else if(age < 12) {
+			System.out.println("적정 연령이 아닙니다.");
+		
+		} else if(hei < 140.0) {
+			System.out.println("적정 키가 아닙니다.");
+			
+		} else if (age < 0 || age > 100) {
+			System.out.println("잘못 입력 하셨습니다");
+			
+		}
+		
+		
+		
+		
+		
 	}
 	
 	public void ex8() {
@@ -215,7 +275,33 @@ public class conditionExample {
 		// 나이 X , 키 X : "나이와 키 모두 적절치 않음";
 		// 나이 O , 키 O : "탑승 가능"
 	
+		Scanner sc = new Scanner(System.in);
 		
+		System.out.print("나이 : ");
+		int age = sc.nextInt();
+		
+		System.out.print("키 : ");
+		double hei = sc.nextDouble();
+		
+		if(age < 0 || age > 100) {
+			System.out.println("나이를 잘못 입력 하셨습니다.");
+			
+		} else if(hei < 0 || hei > 250.0) {
+			System.out.println("키를 잘못 입력 하셨습니다.");
+			
+		} else if(age >= 12 && hei < 140.0) {
+			System.out.println("나이는 적절하나, 키가 적절치 않음");
+			
+		} else if(age < 12 && hei >= 140.0) {
+			System.out.println("키는 적절하나, 나이는 적절치 않음");
+			
+		} else if(age < 12 && hei < 140.0) {
+			System.out.println("나이와 키 모두 적절치 않음");
+			
+		} else if(age >= 12 && hei >= 140.0) {
+			System.out.println("탑승 가능");
+			
+		}
 		
 		
 		
